@@ -14,7 +14,7 @@ def scrape_twitch_earnings(max_clicks = 50, file_path = 'data/twitch_earnings.cs
     """
     A function to scrape information from the twitch earnings leaderboard 
     (https://twitch.pages.dev/). By default the leaderboard only displays the 
-    top 100 twitch earners. Clicking on the "More..." button at the button at 
+    top 100 twitch earners. Clicking on the "More..." button at the bottom of 
     the page displays an addtional 100 earners (200 total). Increasing the 
     max_clicks argument will increase the number of streamer data returned, 
     but will take longer to run.
@@ -24,7 +24,7 @@ def scrape_twitch_earnings(max_clicks = 50, file_path = 'data/twitch_earnings.cs
     file_path: Path of csv file to save -> str
     
     Return:
-    A csv file saved to file_path with the following columns:
+    A csv file saved to file_path containing a dataframe with the following columns:
         'ranking': ranking of twitch streamer,
         'name': streamer or channel name,
         'earnings_usd': earnings in US dollars
